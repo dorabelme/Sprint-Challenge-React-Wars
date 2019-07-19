@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
-import './App.css';
+import './components/StarWars.css';
 import axios from "axios";
 import Card from "./components/Card";
+import Header from "./components/Header";
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -13,7 +14,7 @@ const App = () => {
   // sync up with, if any.
   useEffect(() => {
     console.log("use effect");
-    axios.get("https://swapi.co/api/people")
+    axios.get("https://swapi.co/api/people/")
       .then(res => {
         console.log("response ", res);
         setPeople(res.data.results)
@@ -25,7 +26,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">React Wars</h1>
+      <Header />
       {people.map(person => <Card person={person} />)}
     </div>
   );
