@@ -13,12 +13,12 @@ const MainTitle = styled.h1`
 `;
 
 
-function Header() {
+function Header(props) {
     return (
         <HeaderDiv>
             <MainTitle className="Header">React Wars</MainTitle>
-            <ButtonExampleShorthand content="Previous"></ButtonExampleShorthand>
-            <ButtonExampleShorthand content="Next"></ButtonExampleShorthand>
+            <ButtonExampleShorthand onClick={props.visitPrevious} content="Previous"></ButtonExampleShorthand>
+            <ButtonExampleShorthand onClick={props.visitNext} content="Next"></ButtonExampleShorthand>
         </HeaderDiv >
     )
 };
