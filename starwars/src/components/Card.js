@@ -11,17 +11,20 @@ const CardContent = styled.div`
     min-height: 16.5rem;
     border-radius: 10px;
     text-align: center;
+    background-color: black;
 `;
 
 const Title = styled.h2`
     font-family: 'Russo One', sans-serif;
     font-size: 2rem;
     margin-bottom: 1.5rem;
+    color: white;
 `;
 
 const StyledP = styled.p`
   font-family: 'Russo One', sans-serif;
   font-size: 18px;
+  color: white;
 `;
 
 
