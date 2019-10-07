@@ -26,13 +26,25 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+React JS is one of the most popular libraries for building applications built by engineers at Facebook. It’s not an MVC framework, but often considered as the ‘V’ in MVC. It’s built for handling complex DOM updates.
+Problems it tries to solve: If a page has data that constantly changes over time (like Twitter, Facebook, Quora), then the DOM has to update very fast and reflect changes in other parts of UI that use that same element. React solves this problem through the virtual DOM. React stores state and only changes elements of the DOM tree that were changed.
+Reusability: When writing in React.JS, we separate parts of the app into components. The component contains the necessary markup and JS that makes our code very modular and reusable. The same component can be reused in different parts or in an entirely different app. 
+
 - [ ] What does it mean to _think_ in react?
+
+React is a declarative JS library. It means that we define what we want done vs. painstakingly telling it how we want it done. There is also a big emphasis on creating components that are reusable, easy to test and can be maintained with minimum effort. Rule of thumb: a components should have one job.
 
 - [ ] Describe state.
 
+State is an object that represents part of the app that we want to change. We can think of it like memory. Each component can have its own state. We change a component’s state with setState( ) in functional components. 
+
 - [ ] Describe props.
 
+When we want to pass information stored in state from one component to another, we pass it as props. We don’t make changes to props, they’re read-only. It helps ensure that data flow is clean, so when changes are made we know where it happened.
+
 - [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+
+A side effect can be anything that affects something outside the scope of the function that is executed. Examples are fetching data from an API, manually manipulating the DOM, timers. There are two categories in React: 1. Don’t require clean-up, 2. Do require clean-up. React offers solutions for managing side effects to avoid inconsistency and bugs. You use useEffect( ) with functional components to sync effects.
 
 ## Project Set Up
 
